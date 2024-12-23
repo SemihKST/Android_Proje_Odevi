@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAE8F0"
+    android:backgroundTintMode="screen"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageview_C"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="61dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_girisYap"
+        app:layout_constraintEnd_toEndOf="@+id/rdb_kadin"
+        app:layout_constraintStart_toStartOf="@+id/et_TCK"
+        app:layout_constraintTop_toBottomOf="@+id/rdb_kadin"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RadioButton
+        android:id="@+id/rdb_kadin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="49dp"
+        android:onClick="click_rbK"
+        android:text="Kadın"
+        android:textColor="#0B0B0B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageview_C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rdb_erkek"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioButton
+        android:id="@+id/rdb_erkek"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="click_rbE"
+        android:text="Erkek"
+        android:textColor="#0B0B0B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rdb_kadin"
+        app:layout_constraintEnd_toStartOf="@+id/rdb_kadin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:background="#4CAF50"
+        android:text="Lütfen cinsiyetinizi seçiniz"
+        android:textAlignment="center"
+        android:textColor="#EDEAEA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/rdb_kadin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_TCK" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="69dp"
+        android:background="#86E7E7"
+        android:text="GİRİŞ EKRANI"
+        android:textAlignment="center"
+        android:textColor="#141414"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/et_TCK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_TCK"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:hint="TC KİMLİK NUMARANIZ..."
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#0D0C0C"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btn_girisYap"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
+        android:onClick="click_girisYap"
+        android:text="Giriş Yap"
+        android:textColor="#0D0C0C"
+        android:textColorLink="#D5D4D4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_C" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
